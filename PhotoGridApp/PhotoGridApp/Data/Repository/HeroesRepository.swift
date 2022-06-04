@@ -8,8 +8,15 @@
 import Foundation
 
 struct HeroesRepository: HeroesRepositoryProtocol {
+
+    var api: ApiClient?
+
+    init(api: ApiClient) {
+        self.api = api
+    }
+
     func getAllHeroes(success: @escaping (HeroesListResponse) -> Void, failure: @escaping (ApiError) -> Void) {
-        ApiClient.request(
+        api?.request(
             verb: .get,
             route: .fetchPhotos,
             encoding: .json) { (response: HeroesListResponse) in

@@ -25,6 +25,7 @@
 		009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */; };
 		009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E2284BE44200F4942B /* HeroEntity.swift */; };
 		009F21E5284BE5F000F4942B /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E4284BE5F000F4942B /* ErrorEntity.swift */; };
+		009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E6284BEC8900F4942B /* DiInjectors.swift */; };
 		1746C6D17337580C6A5B5063 /* libPods-PhotoGridApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51DC0FF196345AEAC8ADE0 /* libPods-PhotoGridApp.a */; };
 		B751A71EA5934AD4D2404DB4 /* libPods-PhotoGridAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3AD398DFDE44064987660 /* libPods-PhotoGridAppTests.a */; };
 		B7F38AF547F8D8C466A4110E /* libPods-PhotoGridApp-PhotoGridAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF381B0FBFE6B0BB28D9E7B /* libPods-PhotoGridApp-PhotoGridAppUITests.a */; };
@@ -70,6 +71,7 @@
 		009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCase.swift; sourceTree = "<group>"; };
 		009F21E2284BE44200F4942B /* HeroEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroEntity.swift; sourceTree = "<group>"; };
 		009F21E4284BE5F000F4942B /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
+		009F21E6284BEC8900F4942B /* DiInjectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiInjectors.swift; sourceTree = "<group>"; };
 		033F5B7A3BCD8C61C50276BD /* Pods-PhotoGridAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1136D0043BC8D29B59434EF8 /* Pods-PhotoGridApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridApp/Pods-PhotoGridApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4E659FC38D0E79ADE76020 /* Pods-PhotoGridAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -176,7 +178,7 @@
 			children = (
 				009F21DF284BE40900F4942B /* UseCases */,
 				009F21DD284BC9E700F4942B /* Entities */,
-				009F21DA284BC68300F4942B /* Repository */,
+				009F21DA284BC68300F4942B /* RepositoryInterface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -196,6 +198,7 @@
 			children = (
 				009F219B284BB81200F4942B /* SceneDelegate.swift */,
 				009F2199284BB81200F4942B /* AppDelegate.swift */,
+				009F21E6284BEC8900F4942B /* DiInjectors.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -226,12 +229,12 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		009F21DA284BC68300F4942B /* Repository */ = {
+		009F21DA284BC68300F4942B /* RepositoryInterface */ = {
 			isa = PBXGroup;
 			children = (
 				009F21DB284BC6CF00F4942B /* HeroesRepositoryProtocol.swift */,
 			);
-			path = Repository;
+			path = RepositoryInterface;
 			sourceTree = "<group>";
 		};
 		009F21DD284BC9E700F4942B /* Entities */ = {
@@ -497,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */,
+				009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */,
 				009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */,
 				009F219E284BB81200F4942B /* ViewController.swift in Sources */,
 				009F21D9284BC67500F4942B /* HeroesRepository.swift in Sources */,
@@ -614,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -669,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
