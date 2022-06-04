@@ -17,6 +17,10 @@ struct Hero: Codable {
     let work: Work
     let connections: Connections
     let images: Images
+
+    func asEntity() -> HeroEntity {
+        return HeroEntity(name: self.name)
+    }
 }
 
 // MARK: - Appearance
@@ -70,4 +74,4 @@ struct Work: Codable {
     let occupation, base: String
 }
 
-typealias HerosListResponse = [Hero]
+typealias HeroesListResponse = [Hero]
