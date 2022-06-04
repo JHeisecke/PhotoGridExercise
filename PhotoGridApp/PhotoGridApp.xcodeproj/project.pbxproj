@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		009F219A284BB81200F4942B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F2199284BB81200F4942B /* AppDelegate.swift */; };
 		009F219C284BB81200F4942B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219B284BB81200F4942B /* SceneDelegate.swift */; };
-		009F219E284BB81200F4942B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219D284BB81200F4942B /* ViewController.swift */; };
-		009F21A1284BB81200F4942B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F219F284BB81200F4942B /* Main.storyboard */; };
+		009F219E284BB81200F4942B /* HeroesLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */; };
 		009F21A3284BB81300F4942B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A2284BB81300F4942B /* Assets.xcassets */; };
 		009F21A6284BB81300F4942B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A4284BB81300F4942B /* LaunchScreen.storyboard */; };
 		009F21B1284BB81300F4942B /* PhotoGridAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21B0284BB81300F4942B /* PhotoGridAppTests.swift */; };
@@ -19,9 +18,19 @@
 		009F21D0284BBE0E00F4942B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21CF284BBE0E00F4942B /* ApiClient.swift */; };
 		009F21D2284BBE5900F4942B /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D1284BBE5900F4942B /* ApiError.swift */; };
 		009F21D4284BBF5400F4942B /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D3284BBF5400F4942B /* Endpoints.swift */; };
-		009F21D7284BC33E00F4942B /* HerosListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D6284BC33E00F4942B /* HerosListResponse.swift */; };
-		009F21D9284BC67500F4942B /* HerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D8284BC67500F4942B /* HerosRepository.swift */; };
-		009F21DC284BC6CF00F4942B /* HerosRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21DB284BC6CF00F4942B /* HerosRepositoryProtocol.swift */; };
+		009F21D7284BC33E00F4942B /* HeroesListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D6284BC33E00F4942B /* HeroesListResponse.swift */; };
+		009F21D9284BC67500F4942B /* HeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21D8284BC67500F4942B /* HeroesRepository.swift */; };
+		009F21DC284BC6CF00F4942B /* HeroesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21DB284BC6CF00F4942B /* HeroesRepositoryProtocol.swift */; };
+		009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */; };
+		009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E2284BE44200F4942B /* HeroEntity.swift */; };
+		009F21E5284BE5F000F4942B /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E4284BE5F000F4942B /* ErrorEntity.swift */; };
+		009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E6284BEC8900F4942B /* DiInjectors.swift */; };
+		009F21E9284BF53A00F4942B /* HeroesLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E8284BF53A00F4942B /* HeroesLayoutViewModel.swift */; };
+		009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */; };
+		009F21F3284C017700F4942B /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */; };
+		009F21F4284C017700F4942B /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */; };
+		009F21F6284C04F500F4942B /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21F5284C04F500F4942B /* UImageViewExtension.swift */; };
+		009F21FA284C0CEA00F4942B /* HeroLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */; };
 		1746C6D17337580C6A5B5063 /* libPods-PhotoGridApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51DC0FF196345AEAC8ADE0 /* libPods-PhotoGridApp.a */; };
 		B751A71EA5934AD4D2404DB4 /* libPods-PhotoGridAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3AD398DFDE44064987660 /* libPods-PhotoGridAppTests.a */; };
 		B7F38AF547F8D8C466A4110E /* libPods-PhotoGridApp-PhotoGridAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF381B0FBFE6B0BB28D9E7B /* libPods-PhotoGridApp-PhotoGridAppUITests.a */; };
@@ -48,8 +57,7 @@
 		009F2196284BB81200F4942B /* PhotoGridApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGridApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009F2199284BB81200F4942B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009F219B284BB81200F4942B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		009F219D284BB81200F4942B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		009F21A0284BB81200F4942B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesLayoutViewController.swift; sourceTree = "<group>"; };
 		009F21A2284BB81300F4942B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		009F21A5284BB81300F4942B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009F21A7284BB81300F4942B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,9 +69,19 @@
 		009F21CF284BBE0E00F4942B /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		009F21D1284BBE5900F4942B /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		009F21D3284BBF5400F4942B /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
-		009F21D6284BC33E00F4942B /* HerosListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosListResponse.swift; sourceTree = "<group>"; };
-		009F21D8284BC67500F4942B /* HerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepository.swift; sourceTree = "<group>"; };
-		009F21DB284BC6CF00F4942B /* HerosRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRepositoryProtocol.swift; sourceTree = "<group>"; };
+		009F21D6284BC33E00F4942B /* HeroesListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListResponse.swift; sourceTree = "<group>"; };
+		009F21D8284BC67500F4942B /* HeroesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepository.swift; sourceTree = "<group>"; };
+		009F21DB284BC6CF00F4942B /* HeroesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCase.swift; sourceTree = "<group>"; };
+		009F21E2284BE44200F4942B /* HeroEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroEntity.swift; sourceTree = "<group>"; };
+		009F21E4284BE5F000F4942B /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
+		009F21E6284BEC8900F4942B /* DiInjectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiInjectors.swift; sourceTree = "<group>"; };
+		009F21E8284BF53A00F4942B /* HeroesLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesLayoutViewModel.swift; sourceTree = "<group>"; };
+		009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
+		009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
+		009F21F5284C04F500F4942B /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
+		009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroLayout.storyboard; sourceTree = "<group>"; };
 		033F5B7A3BCD8C61C50276BD /* Pods-PhotoGridAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1136D0043BC8D29B59434EF8 /* Pods-PhotoGridApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridApp/Pods-PhotoGridApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4E659FC38D0E79ADE76020 /* Pods-PhotoGridAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +176,7 @@
 		009F21C9284BB84600F4942B /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				009F21D5284BC31D00F4942B /* DTO */,
 				009F21CD284BBD8500F4942B /* Networking */,
 				009F21CE284BBD9700F4942B /* Repository */,
 			);
@@ -167,8 +186,9 @@
 		009F21CA284BB84F00F4942B /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				009F21DF284BE40900F4942B /* UseCases */,
 				009F21DD284BC9E700F4942B /* Entities */,
-				009F21DA284BC68300F4942B /* Repository */,
+				009F21DA284BC68300F4942B /* RepositoryInterface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -177,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				009F21A4284BB81300F4942B /* LaunchScreen.storyboard */,
-				009F219F284BB81200F4942B /* Main.storyboard */,
-				009F219D284BB81200F4942B /* ViewController.swift */,
+				009F21EA284BF84200F4942B /* Heroes */,
+				009F21EB284BFF8700F4942B /* Utils */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -188,6 +208,7 @@
 			children = (
 				009F219B284BB81200F4942B /* SceneDelegate.swift */,
 				009F2199284BB81200F4942B /* AppDelegate.swift */,
+				009F21E6284BEC8900F4942B /* DiInjectors.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -195,7 +216,6 @@
 		009F21CD284BBD8500F4942B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				009F21D5284BC31D00F4942B /* DTO */,
 				009F21CF284BBE0E00F4942B /* ApiClient.swift */,
 				009F21D1284BBE5900F4942B /* ApiError.swift */,
 				009F21D3284BBF5400F4942B /* Endpoints.swift */,
@@ -206,7 +226,7 @@
 		009F21CE284BBD9700F4942B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				009F21D8284BC67500F4942B /* HerosRepository.swift */,
+				009F21D8284BC67500F4942B /* HeroesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -214,24 +234,63 @@
 		009F21D5284BC31D00F4942B /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				009F21D6284BC33E00F4942B /* HerosListResponse.swift */,
+				009F21D6284BC33E00F4942B /* HeroesListResponse.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
 		};
-		009F21DA284BC68300F4942B /* Repository */ = {
+		009F21DA284BC68300F4942B /* RepositoryInterface */ = {
 			isa = PBXGroup;
 			children = (
-				009F21DB284BC6CF00F4942B /* HerosRepositoryProtocol.swift */,
+				009F21DB284BC6CF00F4942B /* HeroesRepositoryProtocol.swift */,
 			);
-			path = Repository;
+			path = RepositoryInterface;
 			sourceTree = "<group>";
 		};
 		009F21DD284BC9E700F4942B /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				009F21E2284BE44200F4942B /* HeroEntity.swift */,
+				009F21E4284BE5F000F4942B /* ErrorEntity.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		009F21DF284BE40900F4942B /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		009F21EA284BF84200F4942B /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				009F21EE284C00C700F4942B /* Cell */,
+				009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */,
+				009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */,
+				009F21E8284BF53A00F4942B /* HeroesLayoutViewModel.swift */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		009F21EB284BFF8700F4942B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */,
+				009F21F5284C04F500F4942B /* UImageViewExtension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		009F21EE284C00C700F4942B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */,
+				009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		BF1454D2CA65BDF56B27B65E /* Frameworks */ = {
@@ -367,7 +426,8 @@
 			files = (
 				009F21A6284BB81300F4942B /* LaunchScreen.storyboard in Resources */,
 				009F21A3284BB81300F4942B /* Assets.xcassets in Resources */,
-				009F21A1284BB81200F4942B /* Main.storyboard in Resources */,
+				009F21F4284C017700F4942B /* HeroCollectionViewCell.xib in Resources */,
+				009F21FA284C0CEA00F4942B /* HeroLayout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,15 +539,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009F219E284BB81200F4942B /* ViewController.swift in Sources */,
-				009F21D9284BC67500F4942B /* HerosRepository.swift in Sources */,
+				009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */,
+				009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */,
+				009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */,
+				009F219E284BB81200F4942B /* HeroesLayoutViewController.swift in Sources */,
+				009F21D9284BC67500F4942B /* HeroesRepository.swift in Sources */,
 				009F219A284BB81200F4942B /* AppDelegate.swift in Sources */,
+				009F21E9284BF53A00F4942B /* HeroesLayoutViewModel.swift in Sources */,
 				009F219C284BB81200F4942B /* SceneDelegate.swift in Sources */,
+				009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */,
 				009F21D2284BBE5900F4942B /* ApiError.swift in Sources */,
 				009F21D4284BBF5400F4942B /* Endpoints.swift in Sources */,
+				009F21F6284C04F500F4942B /* UImageViewExtension.swift in Sources */,
 				009F21D0284BBE0E00F4942B /* ApiClient.swift in Sources */,
-				009F21DC284BC6CF00F4942B /* HerosRepositoryProtocol.swift in Sources */,
-				009F21D7284BC33E00F4942B /* HerosListResponse.swift in Sources */,
+				009F21F3284C017700F4942B /* HeroCollectionViewCell.swift in Sources */,
+				009F21DC284BC6CF00F4942B /* HeroesRepositoryProtocol.swift in Sources */,
+				009F21D7284BC33E00F4942B /* HeroesListResponse.swift in Sources */,
+				009F21E5284BE5F000F4942B /* ErrorEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,14 +592,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		009F219F284BB81200F4942B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				009F21A0284BB81200F4942B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		009F21A4284BB81300F4942B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -594,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -649,7 +709,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -672,7 +732,7 @@
 				INFOPLIST_FILE = PhotoGridApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HeroLayout;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,7 +761,7 @@
 				INFOPLIST_FILE = PhotoGridApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HeroLayout;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -4,6 +4,10 @@
 target 'PhotoGridApp' do
   pod 'Alamofire'
   pod 'Sniffer'
+  pod 'Swinject'
+  pod 'SwinjectStoryboard', '~> 2.2.1'
+  pod 'Bond'
+  pod 'ReactiveKit'
 
   target 'PhotoGridAppTests' do
     inherit! :search_paths

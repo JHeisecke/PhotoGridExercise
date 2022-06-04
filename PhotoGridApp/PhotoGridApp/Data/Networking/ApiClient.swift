@@ -9,9 +9,6 @@ import Foundation
 import Alamofire
 import Sniffer
 
-typealias FailureCallback = (ApiError) -> Void
-typealias GenericDictionary = [String: Any]
-
 enum Encoding {
     case `default`
     case json
@@ -28,8 +25,8 @@ enum Encoding {
     }
 }
 
-class ApiClient {
-    class func request<T: Codable>(
+struct ApiClient {
+    func request<T: Codable>(
         verb: HTTPMethod = .get,
         route: Endpoints,
         parameters: [String: Any] = [:],
@@ -52,7 +49,7 @@ class ApiClient {
                      parameters: parameters,
                      encoding: encoding.alamofire,
                      headers: headers)
-            .validate() // Validates the response status code by default 200..<299
+            .validate(statusCode: 200..<305) // Validates the response status code by default 200..<299
             .response { response in
                 switch response.result {
                 case .success(let data):
