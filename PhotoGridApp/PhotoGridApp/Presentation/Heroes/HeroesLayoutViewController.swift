@@ -16,6 +16,7 @@ class HeroesLayoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        instance()
         setupCollectionView()
         setupObservables()
     }
@@ -46,10 +47,12 @@ extension HeroesLayoutViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension HeroesLayoutViewController: UICollectionViewDelegate {
 
 }
 
+// MARK: - UICollectionViewDataSource
 extension HeroesLayoutViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let heroes = self.heroes else { return 0 }
@@ -61,5 +64,12 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         return cell
+    }
+}
+
+// MARK: - Instance
+extension HeroesLayoutViewController {
+    func instance() {
+        viewModel = HeroesLayoutViewModel(getHeroesUseCase: GetHeroesUseCase(repository: HeroesRepository(api: ApiClient())))
     }
 }

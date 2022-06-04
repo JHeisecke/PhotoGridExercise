@@ -49,7 +49,7 @@ struct ApiClient {
                      parameters: parameters,
                      encoding: encoding.alamofire,
                      headers: headers)
-            .validate() // Validates the response status code by default 200..<299
+            .validate(statusCode: 200..<305) // Validates the response status code by default 200..<299
             .response { response in
                 switch response.result {
                 case .success(let data):

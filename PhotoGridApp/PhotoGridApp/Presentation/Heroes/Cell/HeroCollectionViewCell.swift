@@ -22,7 +22,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
             self.heroImage.loadFrom(URLAddress: hero?.image ?? "")
         }
     }
-    
+
     static let reusableIdentifier = "HeroCellId"
     static let nibName = "HeroCollectionViewCell"
 }
