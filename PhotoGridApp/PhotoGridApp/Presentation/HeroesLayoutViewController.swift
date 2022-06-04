@@ -7,7 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HeroesLayoutViewController: UIViewController {
+
+    var viewModel: HeroesLayoutViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()

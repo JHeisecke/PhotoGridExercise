@@ -5,6 +5,8 @@ target 'PhotoGridApp' do
   pod 'Alamofire'
   pod 'Sniffer'
   pod 'SwinjectStoryboard', '~> 2.2.1'
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
 
   target 'PhotoGridAppTests' do
     inherit! :search_paths

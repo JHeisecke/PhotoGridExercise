@@ -10,7 +10,12 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     @objc class func setup() {
-        defaultContainer.storyboardInitCompleted(ViewController.self) { _, _ in }
+        defaultContainer.storyboardInitCompleted(HeroesLayoutViewController.self) { service, controller in
+            controller.viewModel = service.resolve(HeroesLayoutViewModelProtocol.self)
+        }
+        defaultContainer.register(HeroesLayoutViewModelProtocol.self) { service in
+            HeroesLayoutViewModel(getHeroesUseCase: service.resolve(GetHeroesUseCaseProtocol.self))
+        }
         defaultContainer.register(GetHeroesUseCaseProtocol.self) { service in
             GetHeroesUseCase(repository: service.resolve(HeroesRepositoryProtocol.self)!)
         }
