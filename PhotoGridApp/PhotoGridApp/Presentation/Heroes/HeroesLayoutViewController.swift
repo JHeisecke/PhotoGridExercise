@@ -65,6 +65,8 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCollectionViewCell.reusableIdentifier, for: indexPath) as? HeroCollectionViewCell else {
             return UICollectionViewCell()
         }
+        guard let hero = heroes?[indexPath.row] else { return cell}
+        cell.hero = hero
         return cell
     }
 }
