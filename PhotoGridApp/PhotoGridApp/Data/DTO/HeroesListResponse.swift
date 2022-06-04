@@ -19,7 +19,7 @@ struct Hero: Codable {
     let images: Images
 
     func asEntity() -> HeroEntity {
-        return HeroEntity(name: self.name)
+        return HeroEntity(image: self.images.md, name: self.name)
     }
 }
 

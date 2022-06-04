@@ -7,6 +7,7 @@
 
 import Foundation
 import SwinjectStoryboard
+import Swinject
 
 extension SwinjectStoryboard {
     @objc class func setup() {
@@ -14,7 +15,7 @@ extension SwinjectStoryboard {
             controller.viewModel = service.resolve(HeroesLayoutViewModelProtocol.self)
         }
         defaultContainer.register(HeroesLayoutViewModelProtocol.self) { service in
-            HeroesLayoutViewModel(getHeroesUseCase: service.resolve(GetHeroesUseCaseProtocol.self))
+            HeroesLayoutViewModel(getHeroesUseCase: service.resolve(GetHeroesUseCaseProtocol.self)!)
         }
         defaultContainer.register(GetHeroesUseCaseProtocol.self) { service in
             GetHeroesUseCase(repository: service.resolve(HeroesRepositoryProtocol.self)!)

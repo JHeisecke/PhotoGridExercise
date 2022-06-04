@@ -1,11 +1,10 @@
 PODS:
   - Alamofire (5.6.1)
-  - RxCocoa (6.5.0):
-    - RxRelay (= 6.5.0)
-    - RxSwift (= 6.5.0)
-  - RxRelay (6.5.0):
-    - RxSwift (= 6.5.0)
-  - RxSwift (6.5.0)
+  - Bond (7.8.1):
+    - Differ (~> 1.4)
+    - ReactiveKit (~> 3.14)
+  - Differ (1.4.5)
+  - ReactiveKit (3.19.1)
   - Sniffer (2.1.2)
   - Swinject (2.7.1)
   - SwinjectStoryboard (2.2.2):
@@ -13,30 +12,31 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - RxCocoa (= 6.5.0)
-  - RxSwift (= 6.5.0)
+  - Bond
+  - ReactiveKit
   - Sniffer
+  - Swinject
   - SwinjectStoryboard (~> 2.2.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - RxCocoa
-    - RxRelay
-    - RxSwift
+    - Bond
+    - Differ
+    - ReactiveKit
     - Sniffer
     - Swinject
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
-  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
-  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
+  Differ: 3b6bd78e2b20cc795d9a86f7641d087524e4273e
+  ReactiveKit: a36ebeb959fe6852dd674cc423163bfffb7e0541
   Sniffer: 49b0f010f20b1570ed0a760b91d707440197d7a8
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectStoryboard: 240ce371396da09a4c43c72ee5c148108500e184
 
-PODFILE CHECKSUM: ce27bc8b4210bf75dcd6ed870d50c435f417f31e
+PODFILE CHECKSUM: 03f9d8777e2b24139a5d0c32fa6754ce56783ed8
 
 COCOAPODS: 1.11.3

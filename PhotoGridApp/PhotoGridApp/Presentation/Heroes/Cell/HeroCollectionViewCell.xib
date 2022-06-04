@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCellId" id="gTV-IL-0wX" customClass="HeroCollectionViewCell" customModule="PhotoGridApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="196"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="196"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qb-d8-pZM" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="156" height="196"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1-a-bomb" translatesAutoresizingMaskIntoConstraints="NO" id="BpD-h3-p7z">
+                                <rect key="frame" x="0.0" y="0.0" width="156" height="196"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A-Bomb Rojo y negro los lunes y jueves" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-G2-4yI">
+                                <rect key="frame" x="0.0" y="111" width="156" height="35"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BpD-h3-p7z" firstAttribute="leading" secondItem="2Qb-d8-pZM" secondAttribute="leading" id="0fk-Ex-xio"/>
+                            <constraint firstItem="zNg-G2-4yI" firstAttribute="centerX" secondItem="2Qb-d8-pZM" secondAttribute="centerX" id="6qr-FC-tDa"/>
+                            <constraint firstAttribute="trailing" secondItem="BpD-h3-p7z" secondAttribute="trailing" id="C4V-1Q-yvQ"/>
+                            <constraint firstAttribute="bottom" secondItem="zNg-G2-4yI" secondAttribute="bottom" constant="50" id="ZJp-Zs-e2O"/>
+                            <constraint firstAttribute="bottom" secondItem="BpD-h3-p7z" secondAttribute="bottom" id="gTZ-5l-MVI"/>
+                            <constraint firstItem="BpD-h3-p7z" firstAttribute="top" secondItem="2Qb-d8-pZM" secondAttribute="top" id="ji0-uB-OfY"/>
+                            <constraint firstItem="zNg-G2-4yI" firstAttribute="leading" secondItem="2Qb-d8-pZM" secondAttribute="leading" id="qax-Xc-YsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="zNg-G2-4yI" secondAttribute="trailing" id="wPC-z6-hd7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Qb-d8-pZM" secondAttribute="bottom" id="CAe-LF-hev"/>
+                <constraint firstItem="2Qb-d8-pZM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Eli-Wt-qhR"/>
+                <constraint firstItem="2Qb-d8-pZM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EyM-dO-rfI"/>
+                <constraint firstAttribute="trailing" secondItem="2Qb-d8-pZM" secondAttribute="trailing" id="rCr-ZW-Bym"/>
+            </constraints>
+            <size key="customSize" width="156" height="196"/>
+            <connections>
+                <outlet property="heroImage" destination="BpD-h3-p7z" id="lAp-zN-30k"/>
+                <outlet property="heroName" destination="zNg-G2-4yI" id="1w1-4i-vIA"/>
+            </connections>
+            <point key="canvasLocation" x="214.49275362318843" y="128.57142857142856"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="1-a-bomb" width="160" height="240"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

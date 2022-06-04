@@ -6,24 +6,34 @@
 //
 
 import Foundation
-import RxSwift
+import Bond
 
 protocol HeroesLayoutViewModelProtocol {
+    var heroes: Observable<Heroes?> { get }
+    var error: Observable<ErrorEntity?> { get }
+
     var getHeroesUseCase: GetHeroesUseCaseProtocol? { get }
 
     func getHeroes()
 }
 
 struct HeroesLayoutViewModel: HeroesLayoutViewModelProtocol {
+    var heroes: Observable<Heroes?> = Observable(nil)
+    var error: Observable<ErrorEntity?> = Observable(nil)
 
     var getHeroesUseCase: GetHeroesUseCaseProtocol?
+
+    init(getHeroesUseCase: GetHeroesUseCaseProtocol) {
+        self.getHeroesUseCase = getHeroesUseCase
+        getHeroes()
+    }
 
     func getHeroes() {
         getHeroesUseCase?.getHeroes(
             completion: { response in
-                print(response)
+                self.heroes.value = response
             }, error: { error in
-                print(error)
+                self.error.value = error
             }
         )
     }

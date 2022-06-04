@@ -10,5 +10,6 @@ import Foundation
 typealias Heroes = [HeroEntity]
 
 struct HeroEntity {
+    var image: String
     var name: String
 }
