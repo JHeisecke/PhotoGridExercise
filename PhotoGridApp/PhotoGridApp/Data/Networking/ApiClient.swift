@@ -9,14 +9,13 @@ import Foundation
 import Alamofire
 import Sniffer
 
-typealias failureCallback = (ApiError) -> Void
+typealias FailureCallback = (ApiError) -> Void
 typealias GenericDictionary = [String: Any]
 
 enum Encoding {
     case `default`
     case json
     case query
-    
     var alamofire: ParameterEncoding {
         switch self {
         case .default:
@@ -35,20 +34,18 @@ class ApiClient {
         route: Endpoints,
         parameters: [String: Any] = [:],
         headers: HTTPHeaders = [
-            "Content-Type" : "application/json",
-            "Accept" : "application/json"
+            "Content-Type": "application/json",
+            "Accept": "application/json"
         ],
         encoding: Encoding = .default,
         success: @escaping (T) -> Swift.Void,
         failure: ((ApiError) -> Swift.Void)? = nil
     ) {
-        
         // Has connection?
         guard NetworkReachabilityManager()?.isReachable == true else {
             failure?(ApiError(type: .connection))
             return
         }
-        
         BaseSessionManager.shared
             .request(route.endpoint,
                      method: verb,
@@ -60,7 +57,7 @@ class ApiClient {
                 switch response.result {
                 case .success(let data):
                     guard response.error == nil else {
-                        //We got a timeout
+                        // We got a timeout
                         if response.error?._code == NSURLErrorTimedOut {
                             failure?(ApiError(type: .timeout))
                         } else {
@@ -68,16 +65,14 @@ class ApiClient {
                         }
                         return
                     }
-                    
                     guard let data = data else {
                         failure?(ApiError())
                         return
                     }
-                    
                     do {
                         let decoded = try JSONDecoder().decode(T.self, from: data)
                         success(decoded)
-                    } catch (let error) {
+                    } catch let error {
                         let apiError = ApiError(message: error.localizedDescription)
                         failure?(apiError)
                     }
