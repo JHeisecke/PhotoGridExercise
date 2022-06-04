@@ -4,7 +4,6 @@
 target 'PhotoGridApp' do
   pod 'Alamofire'
   pod 'Sniffer'
-  pod 'SwiftLint'
 
   target 'PhotoGridAppTests' do
     inherit! :search_paths
