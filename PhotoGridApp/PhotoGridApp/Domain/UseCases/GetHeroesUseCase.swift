@@ -26,6 +26,7 @@ struct GetHeroesUseCase: GetHeroesUseCaseProtocol {
                 response.forEach { hero in
                     heroes.append(hero.asEntity())
                 }
+                completion(heroes)
             },
             failure: { errorResponse in
                 error(errorResponse.asEntity())

@@ -19,7 +19,7 @@ struct HeroesRepository: HeroesRepositoryProtocol {
         api?.request(
             verb: .get,
             route: .fetchPhotos,
-            encoding: .json) { (response: HeroesListResponse) in
+            encoding: .default) { (response: HeroesListResponse) in
                 success(response)
             } failure: { error in
                 failure(error)

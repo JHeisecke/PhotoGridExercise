@@ -33,7 +33,9 @@ extension HeroesLayoutViewController {
     func setupObservables() {
         viewModel?.heroes.observeNext { [weak self] heroes in
             guard let self = self else { return }
+            guard let heroes = heroes else { return }
             self.heroes = heroes
+            self.collectionView.reloadData()
         }.dispose(in: bag)
 
         viewModel?.error.observeNext { [weak self] error in
