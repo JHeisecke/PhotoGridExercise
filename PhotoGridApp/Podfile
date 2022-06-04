@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'PhotoGridApp' do
+  pod 'Alamofire'
+  pod 'Sniffer'
+  pod 'SwiftLint'
+
+  target 'PhotoGridAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PhotoGridAppUITests' do
+    # Pods for testing
+  end
+
+end

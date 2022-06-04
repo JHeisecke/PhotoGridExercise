@@ -1,0 +1,12 @@
+
+PhotoGridApp/Pods/
+
+*.xcuserstate
+
+PhotoGridApp/PhotoGridApp.xcworkspace/xcshareddata/
+
+.DS_Store
+
+PhotoGridApp/PhotoGridApp.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+
+PhotoGridApp/PhotoGridApp.xcodeproj/xcuserdata/jheisecke.xcuserdatad/xcschemes/xcschememanagement.plist
