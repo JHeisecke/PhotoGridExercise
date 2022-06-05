@@ -16,11 +16,11 @@ class HeroesLayoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Heroes"
         instance()
         setupCollectionView()
         setupObservables()
     }
-
 }
 
 extension HeroesLayoutViewController {
@@ -65,7 +65,7 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCollectionViewCell.reusableIdentifier, for: indexPath) as? HeroCollectionViewCell else {
             return UICollectionViewCell()
         }
-        guard let hero = heroes?[indexPath.row] else { return cell}
+        guard let hero = heroes?[indexPath.row] else { return cell }
         cell.hero = hero
         return cell
     }
@@ -75,5 +75,26 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
 extension HeroesLayoutViewController {
     func instance() {
         viewModel = HeroesLayoutViewModel(getHeroesUseCase: GetHeroesUseCase(repository: HeroesRepository(api: ApiClient())))
+    }
+}
+
+extension HeroesLayoutViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(
+            width: (view.frame.size.width/2)-10,
+            height: (view.frame.size.height/2.5)
+        )
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 5, bottom: 1, right: 5)
     }
 }

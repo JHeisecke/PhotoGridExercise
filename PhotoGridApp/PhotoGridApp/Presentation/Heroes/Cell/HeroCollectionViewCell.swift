@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Sniffer
 
 class HeroCollectionViewCell: UICollectionViewCell {
 
@@ -19,7 +20,13 @@ class HeroCollectionViewCell: UICollectionViewCell {
     var hero: HeroEntity? {
         didSet {
             self.heroName.text = hero?.name
-            self.heroImage.loadFrom(URLAddress: hero?.image ?? "")
+            self.heroImage.layer.cornerRadius = 10
+            guard let imageString = hero?.image else {
+                self.heroImage.image = UIImage(named: "placeholder")
+                return
+            }
+            self.heroImage.image = UIImage(named: "placeholder")
+            self.heroImage.loadFrom(urlString: imageString)
         }
     }
 
