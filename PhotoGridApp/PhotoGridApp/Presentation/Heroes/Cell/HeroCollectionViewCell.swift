@@ -16,6 +16,9 @@ class HeroCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var intelligenceLabel: UILabel!
     @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var deleteButton: UIButton!
+
+    var deleteButtonPressed: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,7 @@ class HeroCollectionViewCell: UICollectionViewCell {
     var hero: HeroEntity? {
         didSet {
             guard let hero = hero else { return }
+            self.deleteButton.setTitle("", for: .normal)
             self.detailsView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
             self.heroName.text = hero.name
             self.powerLabel.text = "\(hero.power)"
@@ -39,6 +43,10 @@ class HeroCollectionViewCell: UICollectionViewCell {
                 placeholder: UIImage(named: "placeholder")
             )
         }
+    }
+
+    @IBAction func deletePressed(_ sender: Any) {
+        deleteButtonPressed?()
     }
 
     static let reusableIdentifier = "HeroCellId"

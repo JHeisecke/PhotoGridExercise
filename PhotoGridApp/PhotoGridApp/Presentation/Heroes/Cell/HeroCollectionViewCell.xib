@@ -130,15 +130,26 @@
                                     <constraint firstAttribute="bottom" secondItem="gcR-cf-5VK" secondAttribute="bottom" id="ztS-Ej-jQs"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I3p-Rz-cRs">
+                                <rect key="frame" x="112" y="0.0" width="44" height="31"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4h3-ji-9wK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BpD-h3-p7z" firstAttribute="leading" secondItem="2Qb-d8-pZM" secondAttribute="leading" id="0fk-Ex-xio"/>
                             <constraint firstAttribute="bottom" secondItem="Fa9-w3-VIF" secondAttribute="bottom" id="0gd-8p-vwb"/>
+                            <constraint firstItem="I3p-Rz-cRs" firstAttribute="top" secondItem="2Qb-d8-pZM" secondAttribute="top" id="5ca-IX-TI6"/>
                             <constraint firstAttribute="trailing" secondItem="BpD-h3-p7z" secondAttribute="trailing" id="C4V-1Q-yvQ"/>
                             <constraint firstItem="Fa9-w3-VIF" firstAttribute="leading" secondItem="2Qb-d8-pZM" secondAttribute="leading" id="erU-YW-PwU"/>
                             <constraint firstAttribute="bottom" secondItem="BpD-h3-p7z" secondAttribute="bottom" id="gTZ-5l-MVI"/>
                             <constraint firstItem="BpD-h3-p7z" firstAttribute="top" secondItem="2Qb-d8-pZM" secondAttribute="top" id="ji0-uB-OfY"/>
+                            <constraint firstAttribute="trailing" secondItem="I3p-Rz-cRs" secondAttribute="trailing" id="kE5-pJ-4Qi"/>
                             <constraint firstAttribute="trailing" secondItem="Fa9-w3-VIF" secondAttribute="trailing" id="o7v-dK-2bR"/>
                         </constraints>
                     </view>
@@ -153,6 +164,7 @@
             </constraints>
             <size key="customSize" width="156" height="196"/>
             <connections>
+                <outlet property="deleteButton" destination="I3p-Rz-cRs" id="RgF-Xn-EMz"/>
                 <outlet property="detailsView" destination="Fa9-w3-VIF" id="c8K-hr-sPm"/>
                 <outlet property="heroImage" destination="BpD-h3-p7z" id="lAp-zN-30k"/>
                 <outlet property="heroName" destination="zNg-G2-4yI" id="1w1-4i-vIA"/>
@@ -168,8 +180,12 @@
         <image name="flame" catalog="system" width="108" height="128"/>
         <image name="hare" catalog="system" width="128" height="92"/>
         <image name="placeholder" width="860" height="784"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

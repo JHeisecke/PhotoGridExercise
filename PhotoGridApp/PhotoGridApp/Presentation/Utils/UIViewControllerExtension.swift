@@ -10,8 +10,8 @@ import UIKit
 extension UIViewController {
     func simpleAlert(
         message: String,
-        title: String = "Mensaje",
-        buttonText: String = "Aceptar",
+        title: String = Messages.message,
+        buttonText: String = Messages.accept,
         completion: @escaping (UIAlertAction) -> Void) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: buttonText, style: .default, handler: completion))
