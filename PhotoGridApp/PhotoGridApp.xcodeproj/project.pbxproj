@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		003D82EE284D633F00BD64EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D82ED284D633F00BD64EE /* Constants.swift */; };
+		003D82F0284D683A00BD64EE /* HeroesLayoutViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D82EF284D683A00BD64EE /* HeroesLayoutViewModelTest.swift */; };
+		003D82F3284D68A900BD64EE /* HeroesRepositoryStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D82F2284D68A900BD64EE /* HeroesRepositoryStub.swift */; };
 		009F219A284BB81200F4942B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F2199284BB81200F4942B /* AppDelegate.swift */; };
 		009F219C284BB81200F4942B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219B284BB81200F4942B /* SceneDelegate.swift */; };
 		009F219E284BB81200F4942B /* HeroesLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */; };
 		009F21A3284BB81300F4942B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A2284BB81300F4942B /* Assets.xcassets */; };
 		009F21A6284BB81300F4942B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A4284BB81300F4942B /* LaunchScreen.storyboard */; };
-		009F21B1284BB81300F4942B /* PhotoGridAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21B0284BB81300F4942B /* PhotoGridAppTests.swift */; };
 		009F21BB284BB81300F4942B /* PhotoGridAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21BA284BB81300F4942B /* PhotoGridAppUITests.swift */; };
 		009F21BD284BB81300F4942B /* PhotoGridAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21BC284BB81300F4942B /* PhotoGridAppUITestsLaunchTests.swift */; };
 		009F21D0284BBE0E00F4942B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21CF284BBE0E00F4942B /* ApiClient.swift */; };
@@ -55,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		003D82ED284D633F00BD64EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		003D82EF284D683A00BD64EE /* HeroesLayoutViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesLayoutViewModelTest.swift; sourceTree = "<group>"; };
+		003D82F2284D68A900BD64EE /* HeroesRepositoryStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepositoryStub.swift; sourceTree = "<group>"; };
 		009F2196284BB81200F4942B /* PhotoGridApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGridApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009F2199284BB81200F4942B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		009F219B284BB81200F4942B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		009F21A5284BB81300F4942B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009F21A7284BB81300F4942B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009F21AC284BB81300F4942B /* PhotoGridAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		009F21B0284BB81300F4942B /* PhotoGridAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridAppTests.swift; sourceTree = "<group>"; };
 		009F21B6284BB81300F4942B /* PhotoGridAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		009F21BA284BB81300F4942B /* PhotoGridAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridAppUITests.swift; sourceTree = "<group>"; };
 		009F21BC284BB81300F4942B /* PhotoGridAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003D82F1284D689C00BD64EE /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				003D82F2284D68A900BD64EE /* HeroesRepositoryStub.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
 		009F218D284BB81200F4942B = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +169,8 @@
 		009F21AF284BB81300F4942B /* PhotoGridAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				009F21B0284BB81300F4942B /* PhotoGridAppTests.swift */,
+				003D82F1284D689C00BD64EE /* Stubs */,
+				003D82EF284D683A00BD64EE /* HeroesLayoutViewModelTest.swift */,
 			);
 			path = PhotoGridAppTests;
 			sourceTree = "<group>";
@@ -563,7 +574,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009F21B1284BB81300F4942B /* PhotoGridAppTests.swift in Sources */,
+				003D82F0284D683A00BD64EE /* HeroesLayoutViewModelTest.swift in Sources */,
+				003D82F3284D68A900BD64EE /* HeroesRepositoryStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
