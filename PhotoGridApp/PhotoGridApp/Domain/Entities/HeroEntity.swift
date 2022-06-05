@@ -12,4 +12,5 @@ typealias Heroes = [HeroEntity]
 struct HeroEntity {
     var image: String
     var name: String
+    var power, speed, intelligence: Int
 }

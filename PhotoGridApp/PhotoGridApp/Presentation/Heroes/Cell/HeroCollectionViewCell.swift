@@ -12,6 +12,10 @@ class HeroCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var heroName: UILabel!
     @IBOutlet weak var heroImage: UIImageView!
+    @IBOutlet weak var powerLabel: UILabel!
+    @IBOutlet weak var speedLabel: UILabel!
+    @IBOutlet weak var intelligenceLabel: UILabel!
+    @IBOutlet weak var detailsView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,9 +23,14 @@ class HeroCollectionViewCell: UICollectionViewCell {
 
     var hero: HeroEntity? {
         didSet {
-            self.heroName.text = hero?.name
+            guard let hero = hero else { return }
+            self.detailsView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            self.heroName.text = hero.name
+            self.powerLabel.text = "\(hero.power)"
+            self.speedLabel.text = "\(hero.speed)"
+            self.intelligenceLabel.text = "\(hero.intelligence)"
             self.heroImage.layer.cornerRadius = 10
-            guard let urlString = hero?.image, let url = URL(string: urlString) else {
+            guard let url = URL(string: hero.image) else {
                 self.heroImage.image = UIImage(named: "placeholder")
                 return
             }

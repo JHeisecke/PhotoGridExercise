@@ -10,6 +10,9 @@ import UIKit
 class HeroesLayoutViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nameButton: UIButton!
+    @IBOutlet weak var speedButton: UIButton!
+    @IBOutlet weak var powerButton: UIButton!
 
     var viewModel: HeroesLayoutViewModelProtocol?
     var heroes: Heroes?
@@ -45,6 +48,30 @@ extension HeroesLayoutViewController {
                 message: error.message,
                 completion: { _ in }
             )
+        }.dispose(in: bag)
+
+        nameButton.reactive.tap.observeNext { [weak self] _ in
+            guard let self = self else { return }
+            self.heroes?.sort(by: { hero1, hero2 in
+                hero1.name < hero2.name
+            })
+            self.collectionView.reloadData()
+        }.dispose(in: bag)
+
+        speedButton.reactive.tap.observeNext { [weak self] _ in
+            guard let self = self else { return }
+            self.heroes?.sort(by: { hero1, hero2 in
+                hero1.speed > hero2.speed
+            })
+            self.collectionView.reloadData()
+        }.dispose(in: bag)
+
+        powerButton.reactive.tap.observeNext { [weak self] _ in
+            guard let self = self else { return }
+            self.heroes?.sort(by: { hero1, hero2 in
+                hero1.power > hero2.power
+            })
+            self.collectionView.reloadData()
         }.dispose(in: bag)
     }
 }
