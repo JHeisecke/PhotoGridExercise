@@ -94,6 +94,10 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
         }
         guard let hero = heroes?[indexPath.row] else { return cell }
         cell.hero = hero
+        cell.deleteButtonPressed = { [weak self] in
+            self?.heroes?.remove(at: indexPath.row)
+            self?.collectionView.reloadData()
+        }
         return cell
     }
 }
