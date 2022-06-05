@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Sniffer
+import Kingfisher
 
 class HeroCollectionViewCell: UICollectionViewCell {
 
@@ -21,12 +21,14 @@ class HeroCollectionViewCell: UICollectionViewCell {
         didSet {
             self.heroName.text = hero?.name
             self.heroImage.layer.cornerRadius = 10
-            guard let imageString = hero?.image else {
+            guard let urlString = hero?.image, let url = URL(string: urlString) else {
                 self.heroImage.image = UIImage(named: "placeholder")
                 return
             }
-            self.heroImage.image = UIImage(named: "placeholder")
-            self.heroImage.loadFrom(urlString: imageString)
+            self.heroImage.kf.setImage(
+                with: url,
+                placeholder: UIImage(named: "placeholder")
+            )
         }
     }
 

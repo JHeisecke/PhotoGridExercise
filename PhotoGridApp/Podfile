@@ -8,6 +8,7 @@ target 'PhotoGridApp' do
   pod 'SwinjectStoryboard', '~> 2.2.1'
   pod 'Bond'
   pod 'ReactiveKit'
+  pod 'Kingfisher'
 
   target 'PhotoGridAppTests' do
     inherit! :search_paths

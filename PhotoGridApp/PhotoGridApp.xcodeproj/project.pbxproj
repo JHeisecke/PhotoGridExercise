@@ -29,7 +29,6 @@
 		009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */; };
 		009F21F3284C017700F4942B /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */; };
 		009F21F4284C017700F4942B /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */; };
-		009F21F6284C04F500F4942B /* UImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21F5284C04F500F4942B /* UImageViewExtension.swift */; };
 		009F21FA284C0CEA00F4942B /* HeroLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */; };
 		1746C6D17337580C6A5B5063 /* libPods-PhotoGridApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51DC0FF196345AEAC8ADE0 /* libPods-PhotoGridApp.a */; };
 		B751A71EA5934AD4D2404DB4 /* libPods-PhotoGridAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3AD398DFDE44064987660 /* libPods-PhotoGridAppTests.a */; };
@@ -80,7 +79,6 @@
 		009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
-		009F21F5284C04F500F4942B /* UImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UImageViewExtension.swift; sourceTree = "<group>"; };
 		009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroLayout.storyboard; sourceTree = "<group>"; };
 		033F5B7A3BCD8C61C50276BD /* Pods-PhotoGridAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1136D0043BC8D29B59434EF8 /* Pods-PhotoGridApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridApp/Pods-PhotoGridApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,7 +277,6 @@
 			isa = PBXGroup;
 			children = (
 				009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */,
-				009F21F5284C04F500F4942B /* UImageViewExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -550,7 +547,6 @@
 				009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */,
 				009F21D2284BBE5900F4942B /* ApiError.swift in Sources */,
 				009F21D4284BBF5400F4942B /* Endpoints.swift in Sources */,
-				009F21F6284C04F500F4942B /* UImageViewExtension.swift in Sources */,
 				009F21D0284BBE0E00F4942B /* ApiClient.swift in Sources */,
 				009F21F3284C017700F4942B /* HeroCollectionViewCell.swift in Sources */,
 				009F21DC284BC6CF00F4942B /* HeroesRepositoryProtocol.swift in Sources */,
