@@ -11,10 +11,9 @@ import XCTest
 class HeroesLayoutViewModelTest: XCTestCase {
 
     private var viewModel: HeroesLayoutViewModel!
-    private var repository: HeroesRepositoryStub!
+    private var repository: HeroesRepositoryStub! = HeroesRepositoryStub()
     
     override func setUpWithError() throws {
-        repository = HeroesRepositoryStub()
         viewModel = HeroesLayoutViewModel(getHeroesUseCase: GetHeroesUseCase(repository: repository))
     }
 

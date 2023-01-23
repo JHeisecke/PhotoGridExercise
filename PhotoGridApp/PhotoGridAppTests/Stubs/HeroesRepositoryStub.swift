@@ -8,7 +8,7 @@
 import Foundation
 @testable import PhotoGridApp
 
-struct HeroesRepositoryStub: HeroesRepositoryProtocol {
+class HeroesRepositoryStub: HeroesRepositoryProtocol {
 
     var hasError = false
 
