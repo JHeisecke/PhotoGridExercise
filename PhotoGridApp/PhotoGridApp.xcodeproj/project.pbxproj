@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		003D82EE284D633F00BD64EE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003D82ED284D633F00BD64EE /* Constants.swift */; };
 		009F219A284BB81200F4942B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F2199284BB81200F4942B /* AppDelegate.swift */; };
-		009F219C284BB81200F4942B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219B284BB81200F4942B /* SceneDelegate.swift */; };
 		009F219E284BB81200F4942B /* HeroesLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */; };
 		009F21A3284BB81300F4942B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A2284BB81300F4942B /* Assets.xcassets */; };
-		009F21A6284BB81300F4942B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21A4284BB81300F4942B /* LaunchScreen.storyboard */; };
 		009F21B1284BB81300F4942B /* PhotoGridAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21B0284BB81300F4942B /* PhotoGridAppTests.swift */; };
 		009F21BB284BB81300F4942B /* PhotoGridAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21BA284BB81300F4942B /* PhotoGridAppUITests.swift */; };
 		009F21BD284BB81300F4942B /* PhotoGridAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21BC284BB81300F4942B /* PhotoGridAppUITestsLaunchTests.swift */; };
@@ -25,12 +23,14 @@
 		009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */; };
 		009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E2284BE44200F4942B /* HeroEntity.swift */; };
 		009F21E5284BE5F000F4942B /* ErrorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E4284BE5F000F4942B /* ErrorEntity.swift */; };
-		009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E6284BEC8900F4942B /* DiInjectors.swift */; };
+		009F21E7284BEC8900F4942B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E6284BEC8900F4942B /* DIContainer.swift */; };
 		009F21E9284BF53A00F4942B /* HeroesLayoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21E8284BF53A00F4942B /* HeroesLayoutViewModel.swift */; };
 		009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */; };
 		009F21F3284C017700F4942B /* HeroCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */; };
 		009F21F4284C017700F4942B /* HeroCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */; };
 		009F21FA284C0CEA00F4942B /* HeroLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */; };
+		00CAD7EB297E19FB0013DECF /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CAD7EA297E19FB0013DECF /* SplashViewController.swift */; };
+		00CAD7EE297E1A730013DECF /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CAD7ED297E1A730013DECF /* Splash.storyboard */; };
 		1746C6D17337580C6A5B5063 /* libPods-PhotoGridApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE51DC0FF196345AEAC8ADE0 /* libPods-PhotoGridApp.a */; };
 		B751A71EA5934AD4D2404DB4 /* libPods-PhotoGridAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3C3AD398DFDE44064987660 /* libPods-PhotoGridAppTests.a */; };
 		B7F38AF547F8D8C466A4110E /* libPods-PhotoGridApp-PhotoGridAppUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CF381B0FBFE6B0BB28D9E7B /* libPods-PhotoGridApp-PhotoGridAppUITests.a */; };
@@ -57,7 +57,6 @@
 		003D82ED284D633F00BD64EE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		009F2196284BB81200F4942B /* PhotoGridApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGridApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		009F2199284BB81200F4942B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		009F219B284BB81200F4942B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		009F219D284BB81200F4942B /* HeroesLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesLayoutViewController.swift; sourceTree = "<group>"; };
 		009F21A2284BB81300F4942B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		009F21A5284BB81300F4942B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,12 +75,14 @@
 		009F21E0284BE42800F4942B /* GetHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCase.swift; sourceTree = "<group>"; };
 		009F21E2284BE44200F4942B /* HeroEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroEntity.swift; sourceTree = "<group>"; };
 		009F21E4284BE5F000F4942B /* ErrorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorEntity.swift; sourceTree = "<group>"; };
-		009F21E6284BEC8900F4942B /* DiInjectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiInjectors.swift; sourceTree = "<group>"; };
+		009F21E6284BEC8900F4942B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		009F21E8284BF53A00F4942B /* HeroesLayoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesLayoutViewModel.swift; sourceTree = "<group>"; };
 		009F21EC284BFFA500F4942B /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		009F21F1284C017700F4942B /* HeroCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewCell.swift; sourceTree = "<group>"; };
 		009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCollectionViewCell.xib; sourceTree = "<group>"; };
 		009F21F9284C0CEA00F4942B /* HeroLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroLayout.storyboard; sourceTree = "<group>"; };
+		00CAD7EA297E19FB0013DECF /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		00CAD7ED297E1A730013DECF /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		033F5B7A3BCD8C61C50276BD /* Pods-PhotoGridAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		1136D0043BC8D29B59434EF8 /* Pods-PhotoGridApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridApp.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridApp/Pods-PhotoGridApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4E659FC38D0E79ADE76020 /* Pods-PhotoGridAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGridAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PhotoGridAppTests/Pods-PhotoGridAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,7 +197,7 @@
 		009F21CB284BB85A00F4942B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				009F21A4284BB81300F4942B /* LaunchScreen.storyboard */,
+				00CAD7EC297E1A010013DECF /* Splash */,
 				009F21EA284BF84200F4942B /* Heroes */,
 				009F21EB284BFF8700F4942B /* Utils */,
 			);
@@ -206,9 +207,8 @@
 		009F21CC284BB86800F4942B /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				009F219B284BB81200F4942B /* SceneDelegate.swift */,
 				009F2199284BB81200F4942B /* AppDelegate.swift */,
-				009F21E6284BEC8900F4942B /* DiInjectors.swift */,
+				009F21E6284BEC8900F4942B /* DIContainer.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -291,6 +291,15 @@
 				009F21F2284C017700F4942B /* HeroCollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		00CAD7EC297E1A010013DECF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				00CAD7EA297E19FB0013DECF /* SplashViewController.swift */,
+				00CAD7ED297E1A730013DECF /* Splash.storyboard */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		BF1454D2CA65BDF56B27B65E /* Frameworks */ = {
@@ -424,10 +433,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				009F21A6284BB81300F4942B /* LaunchScreen.storyboard in Resources */,
 				009F21A3284BB81300F4942B /* Assets.xcassets in Resources */,
 				009F21F4284C017700F4942B /* HeroCollectionViewCell.xib in Resources */,
 				009F21FA284C0CEA00F4942B /* HeroLayout.storyboard in Resources */,
+				00CAD7EE297E1A730013DECF /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,13 +550,13 @@
 			files = (
 				009F21E1284BE42800F4942B /* GetHeroesUseCase.swift in Sources */,
 				003D82EE284D633F00BD64EE /* Constants.swift in Sources */,
-				009F21E7284BEC8900F4942B /* DiInjectors.swift in Sources */,
+				009F21E7284BEC8900F4942B /* DIContainer.swift in Sources */,
+				00CAD7EB297E19FB0013DECF /* SplashViewController.swift in Sources */,
 				009F21E3284BE44200F4942B /* HeroEntity.swift in Sources */,
 				009F219E284BB81200F4942B /* HeroesLayoutViewController.swift in Sources */,
 				009F21D9284BC67500F4942B /* HeroesRepository.swift in Sources */,
 				009F219A284BB81200F4942B /* AppDelegate.swift in Sources */,
 				009F21E9284BF53A00F4942B /* HeroesLayoutViewModel.swift in Sources */,
-				009F219C284BB81200F4942B /* SceneDelegate.swift in Sources */,
 				009F21ED284BFFA500F4942B /* UIViewControllerExtension.swift in Sources */,
 				009F21D2284BBE5900F4942B /* ApiError.swift in Sources */,
 				009F21D4284BBF5400F4942B /* Endpoints.swift in Sources */,
@@ -590,17 +599,6 @@
 			targetProxy = 009F21B7284BB81300F4942B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		009F21A4284BB81300F4942B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				009F21A5284BB81300F4942B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		009F21BE284BB81300F4942B /* Debug */ = {
@@ -731,8 +729,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGridApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HeroLayout;
+				INFOPLIST_KEY_UILaunchStoryboardName = Splash;
+				INFOPLIST_KEY_UIMainStoryboardFile = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -761,8 +759,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhotoGridApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HeroLayout;
+				INFOPLIST_KEY_UILaunchStoryboardName = Splash;
+				INFOPLIST_KEY_UIMainStoryboardFile = Splash;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;

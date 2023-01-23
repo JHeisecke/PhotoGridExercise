@@ -20,7 +20,6 @@ class HeroesLayoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Heroes"
-        instance()
         setupCollectionView()
         setupObservables()
     }
@@ -99,13 +98,6 @@ extension HeroesLayoutViewController: UICollectionViewDataSource {
             self?.collectionView.reloadData()
         }
         return cell
-    }
-}
-
-// MARK: - Instance
-extension HeroesLayoutViewController {
-    func instance() {
-        viewModel = HeroesLayoutViewModel(getHeroesUseCase: GetHeroesUseCase(repository: HeroesRepository(api: ApiClient())))
     }
 }
 
