@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v08-xk-y5t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X4y-mi-TPg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,16 +12,16 @@
         <!--Heroes Layout View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="HeroesLayoutViewController" customModule="PhotoGridApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HeroLayout" id="Y6W-OH-hqX" customClass="HeroesLayoutViewController" customModule="PhotoGridApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-vf-RlS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="57V-Jn-XUA">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="724"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="720"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nTJ-f3-8od">
                                             <size key="itemSize" width="128" height="128"/>
@@ -44,17 +44,17 @@
                                                 <rect key="frame" x="69.5" y="0.0" width="344.5" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pd-2d-DPg">
-                                                        <rect key="frame" x="0.0" y="9.5" width="113.5" height="31"/>
+                                                        <rect key="frame" x="0.0" y="8" width="113.5" height="34.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Name"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZr-ub-otO">
-                                                        <rect key="frame" x="115.5" y="9.5" width="113.5" height="31"/>
+                                                        <rect key="frame" x="115.5" y="8" width="113.5" height="34.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Speed"/>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5t-Rw-c5E">
-                                                        <rect key="frame" x="231" y="9.5" width="113.5" height="31"/>
+                                                        <rect key="frame" x="231" y="8" width="113.5" height="34.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Power"/>
                                                     </button>
@@ -95,7 +95,7 @@
                             <constraint firstItem="1aW-vf-RlS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="k0E-2g-7hQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ehA-CB-fg9"/>
+                    <navigationItem key="navigationItem" id="DUm-nD-JOu"/>
                     <connections>
                         <outlet property="collectionView" destination="57V-Jn-XUA" id="Yif-H4-tVS"/>
                         <outlet property="nameButton" destination="9Pd-2d-DPg" id="ooz-v0-evx"/>
@@ -105,25 +105,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955.07246376811599" y="91.741071428571431"/>
+            <point key="canvasLocation" x="2775.36231884058" y="91.741071428571431"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="KgI-sy-KNl">
+        <scene sceneID="F07-wI-PwX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v08-xk-y5t" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HeroNavigation" automaticallyAdjustsScrollViewInsets="NO" id="X4y-mi-TPg" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="T7r-gQ-j7g">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YDZ-W7-YJi">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="jWi-cP-6xh"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="U6F-VA-kDb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z50-zF-6r2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfF-Rm-96a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1865.217391304348" y="91.741071428571431"/>
         </scene>
     </scenes>
     <resources>
